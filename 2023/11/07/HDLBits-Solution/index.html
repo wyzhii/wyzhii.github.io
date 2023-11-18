@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一个riscv32处理器, wyzhii&#39;s blog">
-    <meta name="description" content="此项目为采用verilog编写的一个单周期riscv32处理器。 
-">
+    <meta name="keywords" content="HDLBits-Solutions, wyzhii&#39;s blog">
+    <meta name="description" content="HDLBits Solutions1. Verilog Language1.1 Basics1.1.1 Wiremodule top_module( input in, output out );
+	assign out  =  in;
+e">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一个riscv32处理器 | wyzhii&#39;s blog</title>
+    <title>HDLBits-Solutions | wyzhii&#39;s blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
     
 
@@ -333,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一个riscv32处理器</h1>
+                    <h1 class="description center-align post-title">HDLBits-Solutions</h1>
                 </div>
             </div>
         </div>
@@ -366,10 +367,6 @@
                                 <span class="chip bg-color">verilog</span>
                             </a>
                         
-                            <a href="/tags/riscv/">
-                                <span class="chip bg-color">riscv</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -382,7 +379,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-11-01
+                    2023-11-07
                 </div>
                 
 
@@ -391,7 +388,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    18
+                    194
                 </div>
                 
 
@@ -411,7 +408,72 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>此项目为采用verilog编写的一个单周期riscv32处理器。 </p>
+                <h1 id="HDLBits-Solutions"><a href="#HDLBits-Solutions" class="headerlink" title="HDLBits Solutions"></a>HDLBits Solutions</h1><h2 id="1-Verilog-Language"><a href="#1-Verilog-Language" class="headerlink" title="1. Verilog Language"></a>1. Verilog Language</h2><h3 id="1-1-Basics"><a href="#1-1-Basics" class="headerlink" title="1.1 Basics"></a>1.1 Basics</h3><h4 id="1-1-1-Wire"><a href="#1-1-1-Wire" class="headerlink" title="1.1.1 Wire"></a>1.1.1 Wire</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> <span class="token keyword">input</span> in<span class="token punctuation">,</span> <span class="token keyword">output</span> out <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">assign</span> out  <span class="token operator">=</span>  in<span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="1-1-2-Wire4"><a href="#1-1-2-Wire4" class="headerlink" title="1.1.2 Wire4"></a>1.1.2 Wire4</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> 
+    <span class="token keyword">input</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>
+    <span class="token keyword">output</span> w<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> <span class="token operator">&#123;</span>w<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token operator">&#125;</span> <span class="token operator">=</span> <span class="token operator">&#123;</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token operator">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Notgate"><a href="#Notgate" class="headerlink" title="Notgate"></a>Notgate</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> <span class="token keyword">input</span> in<span class="token punctuation">,</span> <span class="token keyword">output</span> out <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">assign</span> out <span class="token operator">=</span> <span class="token operator">~</span>in<span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Andgate"><a href="#Andgate" class="headerlink" title="Andgate"></a>Andgate</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> 
+    <span class="token keyword">input</span> a<span class="token punctuation">,</span> 
+    <span class="token keyword">input</span> b<span class="token punctuation">,</span> 
+    <span class="token keyword">output</span> out <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">assign</span> out <span class="token operator">=</span> a <span class="token operator">&amp;</span> b<span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Norgate"><a href="#Norgate" class="headerlink" title="Norgate"></a>Norgate</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> 
+    <span class="token keyword">input</span> a<span class="token punctuation">,</span> 
+    <span class="token keyword">input</span> b<span class="token punctuation">,</span> 
+    <span class="token keyword">output</span> out <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> out <span class="token operator">=</span> <span class="token operator">~</span><span class="token punctuation">(</span>a <span class="token operator">|</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Xnorgate"><a href="#Xnorgate" class="headerlink" title="Xnorgate"></a>Xnorgate</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span> 
+    <span class="token keyword">input</span> a<span class="token punctuation">,</span> 
+    <span class="token keyword">input</span> b<span class="token punctuation">,</span> 
+    <span class="token keyword">output</span> out <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> out <span class="token operator">=</span> <span class="token operator">~</span><span class="token punctuation">(</span>a <span class="token operator">^</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Wire-decl"><a href="#Wire-decl" class="headerlink" title="Wire decl"></a>Wire decl</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token constant">`default_nettype</span> none
+<span class="token keyword">module</span> <span class="token function">top_module</span><span class="token punctuation">(</span>
+    <span class="token keyword">input</span> a<span class="token punctuation">,</span>
+    <span class="token keyword">input</span> b<span class="token punctuation">,</span>
+    <span class="token keyword">input</span> c<span class="token punctuation">,</span>
+    <span class="token keyword">input</span> d<span class="token punctuation">,</span>
+    <span class="token keyword">output</span> out<span class="token punctuation">,</span>
+    <span class="token keyword">output</span> out_n   <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token keyword">wire</span> wire1<span class="token punctuation">,</span> wire2<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> <span class="token operator">&#123;</span>wire1<span class="token punctuation">,</span> wire2<span class="token operator">&#125;</span> <span class="token operator">=</span> <span class="token operator">&#123;</span>a <span class="token operator">&amp;</span> b<span class="token punctuation">,</span> c <span class="token operator">&amp;</span> d<span class="token operator">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> out <span class="token operator">=</span> wire1 <span class="token operator">|</span> wire2<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> out_n <span class="token operator">=</span> <span class="token operator">~</span>out<span class="token punctuation">;</span>
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="7458"><a href="#7458" class="headerlink" title="7458"></a>7458</h4><pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog"><span class="token keyword">module</span> top_module <span class="token punctuation">(</span> 
+    <span class="token keyword">input</span> p1a<span class="token punctuation">,</span> p1b<span class="token punctuation">,</span> p1c<span class="token punctuation">,</span> p1d<span class="token punctuation">,</span> p1e<span class="token punctuation">,</span> p1f<span class="token punctuation">,</span>
+    <span class="token keyword">output</span> p1y<span class="token punctuation">,</span>
+    <span class="token keyword">input</span> p2a<span class="token punctuation">,</span> p2b<span class="token punctuation">,</span> p2c<span class="token punctuation">,</span> p2d<span class="token punctuation">,</span>
+    <span class="token keyword">output</span> p2y <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+	<span class="token keyword">wire</span> wire1<span class="token punctuation">,</span> wire2<span class="token punctuation">,</span> wire3<span class="token punctuation">,</span> wire4<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> wire1 <span class="token operator">=</span> p1a <span class="token operator">&amp;</span> p1b <span class="token operator">&amp;</span> p1c<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> wire2 <span class="token operator">=</span> p1f <span class="token operator">&amp;</span> p1e <span class="token operator">&amp;</span> p1d<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> p1y <span class="token operator">=</span> wire1 <span class="token operator">|</span> wire2<span class="token punctuation">;</span>
+    
+    <span class="token keyword">assign</span> wire3 <span class="token operator">=</span> p2a <span class="token operator">&amp;</span> p2b<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> wire4 <span class="token operator">=</span> p2c <span class="token operator">&amp;</span> p2d<span class="token punctuation">;</span>
+    <span class="token keyword">assign</span> p2y <span class="token operator">=</span> wire3 <span class="token operator">|</span> wire4<span class="token punctuation">;</span>
+
+<span class="token keyword">endmodule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -438,7 +500,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="hhttp://example.com/2023/11/01/tiny-riscv/">hhttp://example.com/2023/11/01/tiny-riscv/</a>
+                    <a href="hhttp://example.com/2023/11/07/HDLBits-Solution/">hhttp://example.com/2023/11/07/HDLBits-Solution/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -478,10 +540,6 @@
                             
                                 <a href="/tags/verilog/">
                                     <span class="chip bg-color">verilog</span>
-                                </a>
-                            
-                                <a href="/tags/riscv/">
-                                    <span class="chip bg-color">riscv</span>
                                 </a>
                             
                         </div>
@@ -527,9 +585,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/11/07/HDLBits-Solution/">
                     <div class="card-image">
@@ -547,9 +606,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -558,6 +617,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -573,7 +633,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2023/11/01/tiny-riscv/">
@@ -603,7 +663,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
